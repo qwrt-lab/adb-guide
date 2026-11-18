@@ -179,12 +179,13 @@
   <pre><code>.\adb shell pm list packages | findstr -i qr</code></pre>
   <pre><code>.\adb shell pm list packages | findstr -i scanner</code></pre>
   <pre><code>.\adb shell pm list packages | findstr -i scan</code></pre>
-  <div class="note">Запомните найденный пакет (обычно <code>ВАШ_ПАКЕТ</code> или <code>com.qrscanner.app</code>).</div>
+  <div class="note">Запомните найденный пакет. Примеры: <code>com.gate.cx</code> или <code>com.qrscanner.app</code></div>
 
   <h3>Шаг 3.3 — Выдать разрешение</h3>
   <p>Только после того как нашли пакет:</p>
-  <pre><code>.\adb shell appops set ВАШ_ПАКЕТ RECEIVE_SENSITIVE_NOTIFICATIONS allow</code></pre>
-  <p>Замените <code>ВАШ_ПАКЕТ</code> на найденный пакет, если он другой.</p>
+  <pre><code>.\adb shell appops set com.gate.cx RECEIVE_SENSITIVE_NOTIFICATIONS allow</code></pre>
+  <p>Если пакет другой — замените <code>com.gate.cx</code> на тот, который нашёлся в шаге 3.2.</p>
+  
 
   <h3>4. Доступ к уведомлениям</h3>
   <div class="step">
